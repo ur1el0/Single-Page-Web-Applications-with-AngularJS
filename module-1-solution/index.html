@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="LunchCheck">
+<head>
+  <meta charset="utf-8">
+  <title>Lunch Checker</title>
+  <style href="style.css" rel="stylesheet"></style>
+</head>
+<body>
+  <div ng-controller="LunchCheckController">
+    <h1>Lunch Checker</h1>
+    
+    <label>Enter comma-separated lunch items: 
+      <input type="text" ng-model="lunchItems" placeholder="e.g., rice, beans, salad">
+    </label>
+    <br><br>
+    <button ng-click="checkLunch()">Check If Too Much</button>
+
+    <div class="message" ng-if="message" ng-class="{ 'green': isEnjoyOrTooMuch, 'red': !isEnjoyOrTooMuch }">
+      {{ message }}
+    </div>
+
+    <input type="text" ng-model="lunchItems" style="margin-top: 20px;" 
+           ng-class="{ 'border-green': isEnjoyOrTooMuch && message, 'border-red': !isEnjoyOrTooMuch && message }">
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

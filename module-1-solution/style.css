@@ -1,0 +1,26 @@
+body 
+{
+     font-family: Arial, sans-serif; 
+     margin: 40px; 
+}
+.message 
+{
+    margin-top: 10px;
+    font-weight: bold;
+}
+.green 
+{
+    color: green; 
+}
+.red 
+{
+    color: red;
+ }
+.border-green 
+{ 
+    border: 2px solid green;
+ }
+.border-red 
+{ 
+    border: 2px solid red; 
+}
