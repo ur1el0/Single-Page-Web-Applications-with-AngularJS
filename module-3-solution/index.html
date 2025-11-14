@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="NarrowItDownApp">
+<head>
+  <meta charset="utf-8">
+  <title>Narrow It Down</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div ng-controller="NarrowItDownController as menu">
+    <h1>Menu Item Search</h1>
+
+    <div class="search">
+      <input type="text" 
+             ng-model="menu.searchTerm" 
+             placeholder="Enter search term (e.g., chicken)">
+      <button ng-click="menu.search()">Narrow It Down For Me!</button
